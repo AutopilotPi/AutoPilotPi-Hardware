@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name "PiPX4-altium-import")(type "KiCad")(uri "${KIPRJMOD}/PiPX4-altium-import.kicad_sym")(options "")(descr ""))
+  (lib (name "kicad_lceda")(type "Legacy")(uri "C:/Users/ncer/Downloads/kicad_lceda2/kicad_lceda.lib")(options "")(descr ""))
+)
