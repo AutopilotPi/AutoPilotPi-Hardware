@@ -5522,7 +5522,7 @@
   (gr_text "5V" (at 95.504 83.312) (layer "B.SilkS") (tstamp 54ad9aa6-a7be-44c3-885f-ccd146cb9449)
     (effects (font (size 0.762 0.762) (thickness 0.127)) (justify mirror))
   )
-  (gr_text "5V" (at 85.09 83.312) (layer "B.SilkS") (tstamp 6ec6b5c2-133e-42f7-beba-dfa3c0df6f41)
+  (gr_text "5V" (at 83.566 83.312) (layer "B.SilkS") (tstamp 6ec6b5c2-133e-42f7-beba-dfa3c0df6f41)
     (effects (font (size 0.762 0.762) (thickness 0.127)) (justify mirror))
   )
   (gr_text "TX" (at 97.028 83.312) (layer "B.SilkS") (tstamp 8792baf9-9f7b-4bde-88af-26cbc9418353)
