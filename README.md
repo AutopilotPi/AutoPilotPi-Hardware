@@ -1,6 +1,6 @@
 # PiPX4-V3s-Hardware
 
-Hi, this project aims to run PX4 on linux. While if we directly use the SBC(single board computer, such as rasberrypi, orangepi and so on) to run PX4, 
+Hi, this project aims to run PX4 on linux. While if we directly use the SBC(single board computer, such as raspberrypi, orangepi and so on) to run PX4, 
 it seems a bit overkill, because the large part of peripherals on the SBC is not necessary for flight controller, and these aslo bring weight for our planes. 
 And also, the SBCs lack the sensors used by PX4, we need to connect them by wires, which is very very ugly.
 
@@ -29,6 +29,6 @@ of course, there are also some disadvantages of v3s, like the only 2 pwm channel
 
 ## Related Projces
 - kernel for v3s:https://github.com/Ncerzzk/linux
-- a quadrotos using this core(WIP):https://github.com/Ncerzzk/V3s_Quadrotor
+- a quadrotors using this core(WIP):https://github.com/Ncerzzk/V3s_Quadrotor
 - PX4 fork for this project(some commits are not accepted by official PX4 yet):https://github.com/Ncerzzk/PX4-Autopilot
 - HDL of the on board fpga:https://github.com/Ncerzzk/I2C_PWM
