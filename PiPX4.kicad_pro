@@ -45,7 +45,7 @@
         "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
-          "min_clearance": 0.127
+          "min_clearance": 0.09999999999999999
         }
       },
       "diff_pair_dimensions": [
@@ -103,7 +103,7 @@
         "allow_blind_buried_vias": false,
         "allow_microvias": false,
         "max_error": 0.005,
-        "min_clearance": 0.08889999999999999,
+        "min_clearance": 0.09989999999999999,
         "min_copper_edge_clearance": 0.39999999999999997,
         "min_hole_clearance": 0.127,
         "min_hole_to_hole": 0.25,
@@ -356,7 +356,7 @@
     "classes": [
       {
         "bus_width": 12.0,
-        "clearance": 0.0889,
+        "clearance": 0.0999,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
