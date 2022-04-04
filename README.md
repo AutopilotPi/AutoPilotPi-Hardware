@@ -7,6 +7,12 @@ And also, the SBCs lack the sensors used by PX4, we need to connect them by wire
 So in this project, I design a special SBC, which is just for PX4 or some other autopilots to run on linux. For now, allwinner V3s is choosed as 
 the soc to do this.
 
+## why to run PX4 on linux?
+
+As you can see the chip shortage recent years because of COVID-19. Comparing the MCU(like stm32F4XX) and linux SOCs, porting the software between 
+linux SOCs is much easier obviously. Though for now, running PX4 on linux is not widely adopted and there are still a few problems, 
+I think it's worth to do so.
+
 ## why V3s? 
 - package is easy for hand soldering.(EQFP-128)
 - internal dram, easy for layout.
