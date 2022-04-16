@@ -7,7 +7,7 @@ And also, the SBCs lack the sensors used by PX4, we need to connect them by wire
 So in this project, I design a special SBC, which is just for autopilot firmwares to run on linux. For now, allwinner V3s is choosed as 
 the soc to do this.
 
-## why to run PX4 on linux?
+## why to run autopilot firmware on linux?
 
 As you can see the chip shortage recent years because of COVID-19. Comparing the MCU(like stm32F4XX) and linux SOCs, porting the software between 
 linux SOCs is much easier obviously. Though for now, running PX4 on linux is not widely adopted and there are still a few problems, 
@@ -30,8 +30,8 @@ of course, there are also some disadvantages of v3s, like the only 2 pwm channel
 - 9 PWM channels maximum
 
 ## Images
-![image1](https://github.com/Ncerzzk/AutoPilotPi-Hardware/blob/main/images/AutoPilotPi.png?raw=true)
-![image2](https://github.com/Ncerzzk/AutoPilotPi-Hardware/blob/main/images/AutoPilotPi-2.png?raw=true)
+![image1](https://github.com/Ncerzzk/AutoPilotPi-Hardware/blob/master/images/AutoPilotPi.jpg?raw=true)
+![image2](https://github.com/Ncerzzk/AutoPilotPi-Hardware/blob/master/images/AutoPilotPi-2.jpg?raw=true)
 
 ## Related Projces
 - kernel for v3s:https://github.com/Ncerzzk/linux
