@@ -1,10 +1,10 @@
-# PiPX4-V3s-Hardware
+# AutoPilotPi-Hardware
 
-Hi, this project aims to run PX4 on linux. While if we directly use the SBC(single board computer, such as raspberrypi, orangepi and so on) to run PX4, 
+Hi, this project aims to run autopilot firmware on linux. While if we directly use the SBC(single board computer, such as raspberrypi, orangepi and so on), 
 it seems a bit overkill, because the large part of peripherals on the SBC is not necessary for flight controller, and these aslo bring weight for our planes. 
 And also, the SBCs lack the sensors used by PX4, we need to connect them by wires, which is very very ugly.
 
-So in this project, I design a special SBC, which is just for PX4 or some other autopilots to run on linux. For now, allwinner V3s is choosed as 
+So in this project, I design a special SBC, which is just for autopilot firmwares to run on linux. For now, allwinner V3s is choosed as 
 the soc to do this.
 
 ## why to run PX4 on linux?
@@ -30,8 +30,8 @@ of course, there are also some disadvantages of v3s, like the only 2 pwm channel
 - 9 PWM channels maximum
 
 ## Images
-![image1](https://github.com/Ncerzzk/PiPX4-V3s-Hardware/blob/main/images/PiPX4.png?raw=true)
-![image2](https://github.com/Ncerzzk/PiPX4-V3s-Hardware/blob/main/images/PiPX4-2.png?raw=true)
+![image1](https://github.com/Ncerzzk/AutoPilotPi-Hardware/blob/main/images/AutoPilotPi.png?raw=true)
+![image2](https://github.com/Ncerzzk/AutoPilotPi-Hardware/blob/main/images/AutoPilotPi-2.png?raw=true)
 
 ## Related Projces
 - kernel for v3s:https://github.com/Ncerzzk/linux

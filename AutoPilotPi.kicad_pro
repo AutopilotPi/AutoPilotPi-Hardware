@@ -346,10 +346,12 @@
     "pinned_footprint_libs": [
       "ic_footprint"
     ],
-    "pinned_symbol_libs": []
+    "pinned_symbol_libs": [
+      "ic"
+    ]
   },
   "meta": {
-    "filename": "PiPX4.kicad_pro",
+    "filename": "AutoPilotPi.kicad_pro",
     "version": 1
   },
   "net_settings": {

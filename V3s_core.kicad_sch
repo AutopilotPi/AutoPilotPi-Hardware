@@ -3139,7 +3139,7 @@
     (property "Value" "Crystal_GND24_Small" (id 1) (at 204.851 229.743 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "Crystal:Crystal_SMD_EuroQuartz_MT-4Pin_3.2x2.5mm_HandSoldering" (id 2) (at 205.486 225.298 0)
+    (property "Footprint" "Crystal:Crystal_SMD_EuroQuartz_MT-4Pin_3.2x2.5mm" (id 2) (at 205.486 225.298 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 205.486 225.298 0)
