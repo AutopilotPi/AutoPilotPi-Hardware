@@ -36,3 +36,4 @@ AutoPilotPi 是一个以运行PX4等自动驾驶固件的SBC（single board comp
 - a quadrotors using this core(WIP):https://github.com/Ncerzzk/V3s_Quadrotor
 - PX4 fork for this project(some commits are not accepted by official PX4 yet):https://github.com/Ncerzzk/PX4-Autopilot
 - HDL of the on board fpga:https://github.com/Ncerzzk/I2C_PWM
+- wiki: https://github.com/Ncerzzk/AutoPilotPi-Hardware/wiki
