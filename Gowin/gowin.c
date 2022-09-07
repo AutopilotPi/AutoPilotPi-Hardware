@@ -32,8 +32,8 @@ gowin_command COMMAND_USER_CODE={{0x13,0x00,0x00,0x00},4};
 gowin_command COMMAND_STATUS_CODE={{0x41,0x00,0x00,0x00},4};
 
 int transfer(int _fd,uint8_t *send, uint8_t *recv, unsigned len);
-void get_codes(int fd,uint8_t code);
-void get_all_codes(int fd);
+uint32_t get_codes(int fd,uint8_t code);
+uint32_t get_all_codes(int fd);
 
 #define GPIO_VAL(gpio_num)      "/sys/class/gpio/gpio" gpio_num "/value"
 #define CS_VAL_DEVICE                  GPIO_VAL("144")
@@ -56,9 +56,9 @@ void set_cs(char * target){
 void give_some_fucking_sclk_cycles(){
     uint8_t buf=0xff;
     // just for making gowin fpga happy
-    int fd = open("/dev/spidev0.3", O_RDWR);
-    transfer(fd,&buf,&buf,1);
-    close(fd);
+    //int fd = open("/dev/spidev0.3", O_RDWR);
+    //transfer(fd,&buf,&buf,1);
+    //close(fd);
     
 }
 
@@ -73,7 +73,7 @@ int transfer(int _fd,uint8_t *send, uint8_t *recv, unsigned len)
         .tx_buf = (uint64_t)send,
         .rx_buf = (uint64_t)recv,
         .len = len,
-        .speed_hz = 100000,
+        .speed_hz = 50000,
         .bits_per_word = 8,
     };
     
@@ -87,18 +87,23 @@ int transfer(int _fd,uint8_t *send, uint8_t *recv, unsigned len)
 }
 
 
-void get_codes(int fd,uint8_t code){
+uint32_t get_codes(int fd,uint8_t code){
     uint8_t buf[8]={code};
+    uint32_t result=0;
     give_some_fucking_sclk_cycles();
     transfer(fd,buf,buf,8);
     printf("get code:0x%x  :",code);
-    printf("0x%x \n",(uint32_t) buf[4]<<24 |(uint32_t) buf[5] <<16 |(uint32_t) buf[6] <<8 | buf[7]);
+    result=(uint32_t) buf[4]<<24 |(uint32_t) buf[5] <<16 |(uint32_t) buf[6] <<8 | buf[7];
+    printf("0x%x \n",result);
+    return result;
 }
 
 int write_enable(int fd){
     uint8_t buf[2]={0x15};
     give_some_fucking_sclk_cycles();
-    return transfer(fd,buf,buf,2); 
+    int result= transfer(fd,buf,buf,2); 
+    return result;
+
 }
 
 
@@ -141,22 +146,26 @@ int write_file(int fd, FILE* fp){
 
     give_some_fucking_sclk_cycles();
 
-    fd = open("/dev/spidev0.3", O_RDWR);
+    //fd = open("/dev/spidev0.3", O_RDWR);
 
-    gpio_export();
+    //gpio_export();
 
-    set_cs("0");
+    //set_cs("0");
     // control cs manually, use a fake spidev to output MOSI
     
     num+=1;
-    for(i=0;i<num/4096;++i){
+/*
+    int SIZE=4095;
+    for(i=0;i<num/SIZE;++i){
         printf("cycle:%d\n",i);
-        transfer(fd,file_buffer+i*4096,file_buffer,4096); 
+        transfer(fd,file_buffer+i*SIZE,file_buffer,SIZE); 
     }
-    printf("last cycle num:%d\n",num%4096);
-    transfer(fd,file_buffer+i*4096,file_buffer,num%4096);  
+    printf("last cycle num:%d\n",num%SIZE);
+    */
+    //transfer(fd,file_buffer+i*SIZE,file_buffer,num%SIZE);  
 
-    set_cs("1");
+    transfer(fd,file_buffer,file_buffer,num);  
+    //set_cs("1");
 
     return 0;
 } 
@@ -176,13 +185,17 @@ int erase_sram(int fd){
 int write_disable(int fd){
     uint8_t buf[2]={0x3A};
     give_some_fucking_sclk_cycles();
-    return transfer(fd,buf,buf,2);     
+
+    int result=transfer(fd,buf,buf,2);     
+
+    return result;
 }
 
-void get_all_codes(int fd){
+uint32_t get_all_codes(int fd){
+    // print all code, return status code
     get_codes(fd,READ_ID_CODE);
     get_codes(fd,USER_CODE); 
-    get_codes(fd,STATUS_CODE);
+    return get_codes(fd,STATUS_CODE);
 }
 
 
@@ -201,8 +214,17 @@ int main(int argc,char **argv){
     char *device=argv[1];
     fp = fopen(filename,"rb");
 
-    //gpio_export();
-    
+    gpio_export();
+
+    give_some_fucking_sclk_cycles();
+
+    set_cs("0");
+
+    give_some_fucking_sclk_cycles();
+
+    set_cs("1");
+
+
     printf("open datafile:%s\n",filename);
 
     fd = open(device, O_RDWR);
@@ -221,17 +243,29 @@ int main(int argc,char **argv){
     if(mode!=SPI_MODE_0){
         printf("can't set spi mode!\n");
     }
-    get_all_codes(fd);
-    //erase_sram(fd);
+
+    erase_sram(fd);
     //sleep(1);
     rewrite(fd);
-    write_enable(fd);
-    write_file(fd,fp);
-    write_disable(fd);
 
     get_all_codes(fd);
+
+    write_enable(fd);
+
+    write_file(fd,fp);
+
+    write_disable(fd);
+
+
+    uint32_t status=0;
+    status=get_all_codes(fd);
 
     close(fd);
     fclose(fp);
-    return 0;
+
+    if(status & (1<<13)){
+        return 0;
+    }else{
+        return 1;
+    }
 }
