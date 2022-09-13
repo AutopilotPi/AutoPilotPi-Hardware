@@ -1,0 +1,19 @@
+06-29 22:45:17 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 278:Plugin executed on: 'win32'
+06-29 22:45:17 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 279:Plugin executed with python version: '3.9.10 (main, Feb 11 2022, 04:18:11) [MSC v.1928 64 bit (AMD64)]'
+06-29 22:45:17 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 280:KiCad build version: (6.0.2)
+06-29 22:45:17 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 281:Plugin version: 1.1.0
+06-29 22:45:17 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 282:Frame repr: <wx._core.Frame object at 0x000001D76F7CFF70>
+06-29 22:45:17 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 301:Preparing replicator with U2 as a reference
+06-29 22:45:17 com_github_MitjaNemec_ReplicateLayout.replicate_layout 98:getting a list of all footprints on board
+06-29 22:45:17 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 329:source anchor footprint is 'U2'
+Located on: ['V3s_core']
+With filenames: ['V3s_core.kicad_sch']
+With sheet_id:['V3s_core']
+06-29 22:45:17 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 336:Corresponding footprints are 
+[('U2', ['V3s_core'])]
+06-29 22:45:17 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 348:Showing dialog
+06-29 22:45:17 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 354:Toolbar position: wx.Point(1648, 146)
+06-29 22:45:17 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 360:Dialog position: wx.Point(1284, 146)
+06-29 22:45:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 329:constructing a list of sheets suitable for replication on level:'V3s_core', file:'V3s_core.kicad_sch'
+06-29 22:45:19 com_github_MitjaNemec_ReplicateLayout.replicate_layout 366:suitable sheets are:[]
+06-29 22:45:27 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 207:User canceled the dialog

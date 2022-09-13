@@ -1,0 +1,14 @@
+06-29 22:40:10 com_github_MitjaNemec_SaveRestoreLayout.action_save_restore_layout 149:Plugin executed on: 'win32'
+06-29 22:40:10 com_github_MitjaNemec_SaveRestoreLayout.action_save_restore_layout 150:Plugin executed with python version: '3.9.10 (main, Feb 11 2022, 04:18:11) [MSC v.1928 64 bit (AMD64)]'
+06-29 22:40:10 com_github_MitjaNemec_SaveRestoreLayout.action_save_restore_layout 151:KiCad build version: (6.0.2)
+06-29 22:40:10 com_github_MitjaNemec_SaveRestoreLayout.action_save_restore_layout 152:Plugin version: 1.1.2
+06-29 22:40:10 com_github_MitjaNemec_SaveRestoreLayout.action_save_restore_layout 153:Frame repr: <wx._core.Frame object at 0x000001D76F7CFF70>
+06-29 22:40:10 com_github_MitjaNemec_SaveRestoreLayout.action_save_restore_layout 171:Anchor footprint reference is 'I1'
+06-29 22:40:11 com_github_MitjaNemec_SaveRestoreLayout.action_save_restore_layout 180:Save layout chosen
+06-29 22:40:11 com_github_MitjaNemec_SaveRestoreLayout.save_restore_layout 281:Working on D:/OneDrive/Personal_Projects/PCB_Quadrotor/AutoPilotPi/AutoPilotPi/AutoPilotPi.kicad_pcb
+06-29 22:40:11 com_github_MitjaNemec_SaveRestoreLayout.save_restore_layout 132:getting a list of all footprints on board
+06-29 22:40:11 com_github_MitjaNemec_SaveRestoreLayout.save_restore_layout 286:Saving the current board temporary in order to leave current layout intact
+06-29 22:40:11 com_github_MitjaNemec_SaveRestoreLayout.save_restore_layout 292:Saving board as tempfile: C:\Users\ncer\AppData\Local\Temp\temp_board_file_for_save.kicad_pcb
+06-29 22:40:12 com_github_MitjaNemec_SaveRestoreLayout.save_restore_layout 297:Loaded temp boardfile: C:\Users\ncer\AppData\Local\Temp\temp_board_file_for_save.kicad_pcb
+06-29 22:40:12 com_github_MitjaNemec_SaveRestoreLayout.save_restore_layout 298:Get project schematics and layout data
+06-29 22:40:12 com_github_MitjaNemec_SaveRestoreLayout.save_restore_layout 132:getting a list of all footprints on board
