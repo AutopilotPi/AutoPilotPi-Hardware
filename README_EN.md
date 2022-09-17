@@ -30,8 +30,8 @@ of course, there are also some disadvantages of v3s, like the only 2 pwm channel
 - 9 PWM channels maximum
 
 ## Images
-![image1](https://github.com/Ncerzzk/AutoPilotPi-Hardware/blob/master/images/AutoPilotPi.jpg?raw=true)
-![image2](https://github.com/Ncerzzk/AutoPilotPi-Hardware/blob/master/images/AutoPilotPi-2.jpg?raw=true)
+![image1](https://github.com/Ncerzzk/AutoPilotPi-Hardware/blob/mini/images/AutoPilotPi.jpg?raw=true)
+![image2](https://github.com/Ncerzzk/AutoPilotPi-Hardware/blob/mini/images/AutoPilotPi-2.jpg?raw=true)
 
 ## Related Projces
 - kernel for v3s:https://github.com/Ncerzzk/linux

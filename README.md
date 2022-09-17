@@ -28,8 +28,8 @@ AutoPilotPi 是一个以运行PX4等自动驾驶固件的SBC（single board comp
 - 9 PWM channels maximum
 
 ## Images
-![image1](https://github.com/Ncerzzk/AutoPilotPi-Hardware/blob/master/images/AutoPilotPi.jpg?raw=true)
-![image2](https://github.com/Ncerzzk/AutoPilotPi-Hardware/blob/master/images/AutoPilotPi-2.jpg?raw=true)
+![image1](https://github.com/Ncerzzk/AutoPilotPi-Hardware/blob/mini/images/AutoPilotPi.jpg?raw=true)
+![image2](https://github.com/Ncerzzk/AutoPilotPi-Hardware/blob/mini/images/AutoPilotPi-2.jpg?raw=true)
 
 ## Related Projces
 - kernel for v3s:https://github.com/Ncerzzk/linux
