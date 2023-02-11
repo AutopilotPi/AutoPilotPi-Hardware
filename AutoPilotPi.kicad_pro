@@ -33,9 +33,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.762,
-          "height": 1.524,
-          "width": 1.524
+          "drill": 0.0,
+          "height": 2.0,
+          "width": 2.0
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -121,6 +121,7 @@
       "track_widths": [
         0.0,
         0.254,
+        0.34925,
         0.508,
         0.762
       ],
@@ -443,6 +444,10 @@
     [
       "46301cab-1d7b-4022-921a-2b4b16934078",
       "FPGA"
+    ],
+    [
+      "259bdeb5-f9c0-49c2-b0b2-767825207cf8",
+      "esp32_wifi"
     ],
     [
       "b2393452-4415-4de6-b840-281664ec2455",

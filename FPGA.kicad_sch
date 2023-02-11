@@ -963,7 +963,7 @@
     (in_bom yes) (on_board yes)
     (uuid c838c6ae-f4b4-4703-b9b9-6a89bb9f90b1)
     (property "Reference" "R21" (id 0) (at 161.925 66.675 90))
-    (property "Value" "0R" (id 1) (at 164.465 69.85 90))
+    (property "Value" "NC" (id 1) (at 164.465 69.85 90))
     (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (id 2) (at 162.56 73.533 90)
       (effects (font (size 1.27 1.27)) hide)
     )
