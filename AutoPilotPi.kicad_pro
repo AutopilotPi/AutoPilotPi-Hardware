@@ -347,7 +347,8 @@
       "ic_footprint"
     ],
     "pinned_symbol_libs": [
-      "ic"
+      "ic",
+      "modules"
     ]
   },
   "meta": {
